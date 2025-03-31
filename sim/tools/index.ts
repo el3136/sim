@@ -42,6 +42,8 @@ import { visionTool } from './vision/vision'
 import { whatsappSendMessageTool } from './whatsapp'
 import { xReadTool, xSearchTool, xUserTool, xWriteTool } from './x'
 import { youtubeSearchTool } from './youtube/search'
+import { ChatbotTool } from './chatbot/Chatbot'
+import { mcpTool } from './mcp/mcp'
 
 const logger = createLogger('Tools')
 
@@ -104,6 +106,9 @@ export const tools: Record<string, ToolConfig> = {
   confluence_list: confluenceListTool,
   confluence_update: confluenceUpdateTool,
   dalle_generate: dalleTool,
+
+  chatbot_tool: ChatbotTool,
+  mcp_tool: mcpTool,
 }
 
 // Get a tool by its ID

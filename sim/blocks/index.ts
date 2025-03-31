@@ -33,6 +33,9 @@ import { XBlock } from './blocks/x'
 import { YouTubeBlock } from './blocks/youtube'
 import { BlockConfig } from './types'
 
+import { ChatbotBlock } from './blocks/Chatbot'
+import { MCPBlock } from './blocks/mcp'
+
 // Export blocks for ease of use
 export {
   AgentBlock,
@@ -67,12 +70,19 @@ export {
   PerplexityBlock,
   ConfluenceBlock,
   ImageGeneratorBlock,
+
+  ChatbotBlock,
+  MCPBlock,
 }
 
 // Registry of all block configurations, alphabetically sorted
 const blocks: Record<string, BlockConfig> = {
   agent: AgentBlock,
   api: ApiBlock,
+
+  // new
+  chatbot: ChatbotBlock,
+  
   condition: ConditionBlock,
   confluence: ConfluenceBlock,
   evaluator: EvaluatorBlock,
@@ -87,6 +97,10 @@ const blocks: Record<string, BlockConfig> = {
   // guesty: GuestyBlock,
   image_generator: ImageGeneratorBlock,
   jina: JinaBlock,
+
+  // new
+  mcp: MCPBlock,
+  
   notion: NotionBlock,
   openai: OpenAIBlock,
   perplexity: PerplexityBlock,
